@@ -80,7 +80,7 @@
       <packagereq type="mandatory">dump</packagereq>
       <packagereq type="mandatory">ed</packagereq>
       <packagereq type="mandatory">gnupg2</packagereq>
-      <packagereq type="mandatory">grub2-starfield-theme</packagereq>
+      <packagereq type="mandatory">grub2-qubes-theme</packagereq>
       <packagereq type="mandatory">irqbalance</packagereq>
       <packagereq type="mandatory">linux-firmware</packagereq>
       <packagereq type="mandatory">logrotate</packagereq>
