@@ -119,6 +119,8 @@
       <packagereq type="mandatory">which</packagereq>
       <packagereq type="mandatory">dnf-utils</packagereq>
       <packagereq type="mandatory">zip</packagereq>
+      <packagereq type="mandatory">annobin</packagereq>
+      <packagereq type="mandatory">authselect</packagereq>
     </packagelist>
   </group>
   <group>
