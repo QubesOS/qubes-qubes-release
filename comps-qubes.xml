@@ -117,7 +117,7 @@
       <packagereq type="mandatory">util-linux</packagereq>
       <packagereq type="mandatory">vim-enhanced</packagereq>
       <packagereq type="mandatory">which</packagereq>
-      <packagereq type="mandatory">yum-utils</packagereq>
+      <packagereq type="mandatory">dnf-utils</packagereq>
       <packagereq type="mandatory">zip</packagereq>
     </packagelist>
   </group>
