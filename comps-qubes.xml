@@ -50,8 +50,8 @@
       <packagereq>firewalld</packagereq>
       <packagereq>gfs2-utils</packagereq>
       <packagereq>glibc-all-langpacks</packagereq>
-      <packagereq>grub2</packagereq>
-      <packagereq>grub2-efi</packagereq>
+      <packagereq>grub2-pc</packagereq>
+      <packagereq>grub2-efi-x64</packagereq>
       <packagereq>hfsplus-tools</packagereq>
       <packagereq>iscsi-initiator-utils</packagereq>
       <packagereq>lvm2</packagereq>
@@ -59,7 +59,7 @@
       <packagereq>mdadm</packagereq>
       <packagereq>ntfsprogs</packagereq>
       <packagereq>reiserfs-utils</packagereq>
-      <packagereq>shim</packagereq>
+      <packagereq>shim-x64</packagereq>
       <packagereq>syslinux-extlinux</packagereq>
       <packagereq>xfsprogs</packagereq>
     </packagelist>
@@ -1315,7 +1315,7 @@
       <packagereq>xfwm4-themes</packagereq>
       <packagereq>xfwm4</packagereq>
       <packagereq>xscreensaver-base</packagereq>
-      <packagereq>yumex-dnf</packagereq>
+      <packagereq>dnfdragora</packagereq>
       <packagereq>zenity</packagereq>
     </packagelist>
   </group>
