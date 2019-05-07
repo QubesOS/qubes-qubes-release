@@ -52,6 +52,7 @@
       <packagereq>glibc-all-langpacks</packagereq>
       <packagereq>grub2-pc</packagereq>
       <packagereq>grub2-efi-x64</packagereq>
+      <packagereq>grub2-tools-efi</packagereq>
       <packagereq>hfsplus-tools</packagereq>
       <packagereq>iscsi-initiator-utils</packagereq>
       <packagereq>lvm2</packagereq>
