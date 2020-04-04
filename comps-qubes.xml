@@ -1418,7 +1418,16 @@
       <packagereq type="optional">kernel-latest-qubes-vm</packagereq>
     </packagelist>
   </group>
-
+  <group>
+    <id>qubes-ui</id>
+    <name>Qubes UI (Audio/Gui)</name>
+    <default>true</default>
+    <uservisible>true</uservisible>
+    <packagelist>
+      <packagereq type="mandatory">qubes-audio-daemon</packagereq>
+      <packagereq type="mandatory">qubes-gui-daemon</packagereq>
+    </packagelist>
+  </group>
   <group>
     <id>debian</id>
     <name>Debian 10 (buster) template</name>
@@ -1429,7 +1438,6 @@
       <packagereq>qubes-template-debian-10</packagereq>
     </packagelist>
   </group>
-
   <group>
     <id>whonix</id>
     <name>Whonix</name>
@@ -1441,7 +1449,6 @@
       <packagereq>qubes-template-whonix-ws-15</packagereq>
     </packagelist>
   </group>
-
   <environment>
    <id>qubes-xfce</id>
    <display_order>3</display_order>
