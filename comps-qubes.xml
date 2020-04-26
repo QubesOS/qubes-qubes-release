@@ -1476,6 +1476,9 @@
      <groupid>xfce-extra-plugins</groupid>
      <groupid>xfce-media</groupid>
     </grouplist>
+    <optionlist>
+     <groupid default='true'>qubes-ui</groupid>
+    </optionlist>
   </environment>
   <langpacks>
     <match name="kdelibs" install="kde-l10n-%s"/>
