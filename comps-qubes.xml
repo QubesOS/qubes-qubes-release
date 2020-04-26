@@ -1402,7 +1402,6 @@
       <packagereq type="mandatory">qubes-desktop-linux-common</packagereq>
       <packagereq type="mandatory">qubes-desktop-linux-manager</packagereq>
       <packagereq type="mandatory">qubes-mgmt-salt-dom0</packagereq>
-      <packagereq type="mandatory">qubes-template-fedora-32</packagereq>
       <packagereq type="default">qubes-gpg-split-dom0</packagereq>
       <packagereq type="default">qubes-img-converter-dom0</packagereq>
       <packagereq type="default">qubes-input-proxy</packagereq>
@@ -1429,11 +1428,21 @@
     </packagelist>
   </group>
   <group>
+    <id>fedora</id>
+    <name>Fedora 32 template</name>
+    <description>Fedora 32 template</description>
+    <default>false</default>
+    <uservisible>false</uservisible>
+    <packagelist>
+      <packagereq>qubes-template-fedora-32</packagereq>
+    </packagelist>
+  </group>
+  <group>
     <id>debian</id>
     <name>Debian 10 (buster) template</name>
     <description>Debian 10 (buster) template</description>
-    <default>true</default>
-    <uservisible>true</uservisible>
+    <default>false</default>
+    <uservisible>false</uservisible>
     <packagelist>
       <packagereq>qubes-template-debian-10</packagereq>
     </packagelist>
@@ -1441,9 +1450,9 @@
   <group>
     <id>whonix</id>
     <name>Whonix</name>
-    <default>true</default>
+    <default>false</default>
     <description>Whonix templates (gateway and workstation)</description>
-    <uservisible>true</uservisible>
+    <uservisible>false</uservisible>
     <packagelist>
       <packagereq>qubes-template-whonix-gw-15</packagereq>
       <packagereq>qubes-template-whonix-ws-15</packagereq>
@@ -1465,10 +1474,6 @@
      <groupid>xfce-extra-plugins</groupid>
      <groupid>xfce-media</groupid>
     </grouplist>
-    <optionlist>
-     <groupid default='true'>debian</groupid>
-     <groupid default='true'>whonix</groupid>
-    </optionlist>
   </environment>
   <langpacks>
     <match name="kdelibs" install="kde-l10n-%s"/>
