@@ -1396,6 +1396,7 @@
       <packagereq type="mandatory">kernel-qubes-vm</packagereq>
       <packagereq type="mandatory">kernel</packagereq>
       <packagereq type="mandatory">qubes-artwork</packagereq>
+      <packagereq type="mandatory">qubes-artwork-plymouth</packagereq>
       <packagereq type="mandatory">qubes-core-dom0</packagereq>
       <packagereq type="mandatory">qubes-audio-dom0</packagereq>
       <packagereq type="mandatory">qubes-gui-dom0</packagereq>
