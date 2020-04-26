@@ -1421,6 +1421,7 @@
   <group>
     <id>qubes-ui</id>
     <name>Qubes UI (Audio/Gui)</name>
+    <description>Qubes UI daemons</description>
     <default>true</default>
     <uservisible>true</uservisible>
     <packagelist>
