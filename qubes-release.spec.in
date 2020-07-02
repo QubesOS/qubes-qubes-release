@@ -72,9 +72,6 @@ sed -e "s/%%FCREL%%/%{fedora_base_version}/" fedora.repo.in > $RPM_BUILD_ROOT/et
 sed -e "s/%%FCREL%%/%{fedora_base_version}/" fedora-updates.repo.in > $RPM_BUILD_ROOT/etc/yum.repos.d/fedora-updates.repo
 install -m 644 qubes-templates.repo $RPM_BUILD_ROOT/etc/yum.repos.d
 
-install -d -m 755 $RPM_BUILD_ROOT/usr/share/qubes
-install -m 644 comps-qubes.xml $RPM_BUILD_ROOT/usr/share/qubes/Qubes-comps.xml
-
 # Set up the dist tag macros
 install -d -m 755 $RPM_BUILD_ROOT/etc/rpm
 cat >> $RPM_BUILD_ROOT/etc/rpm/macros.dist << EOF
@@ -114,7 +111,6 @@ rm -rf $RPM_BUILD_ROOT
 %config %attr(0644,root,root) /etc/rpm/macros.dist
 %dir /etc/pki/rpm-gpg
 /etc/pki/rpm-gpg/*
-/usr/share/qubes/Qubes-comps.xml
 
 %files notes
 %defattr(-,root,root,-)
