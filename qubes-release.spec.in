@@ -79,7 +79,7 @@ cat >> $RPM_BUILD_ROOT/etc/rpm/macros.dist << EOF
 
 %%qubes		%{dist_version}
 %%dist		.qbs%{dist_version}
-%%fedora		%{fedora_base_version}
+%%fedora	%{fedora_base_version}
 %%qbs3		1
 %%fc%{fedora_base_version}		1
 EOF
@@ -117,5 +117,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.Qubes-Release-Notes
 
 %changelog
-* Wed Jan 13 2010 Tomasz Sterna <smoku@xiaoka.com> - 1
-- Initial Qubes 1 Release package
+@CHANGELOG@
