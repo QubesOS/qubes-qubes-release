@@ -2,6 +2,7 @@
 name=Fedora %FCREL% - x86_64 - Updates
 #baseurl=http://download.fedoraproject.org/pub/fedora/linux/updates/%FCREL%/x86_64/
 metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f%FCREL%&arch=x86_64
+skip_if_unavailable=False
 enabled=1
 enablegroups=0
 gpgcheck=1
@@ -11,6 +12,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-%FCREL%-primary
 name=Fedora %FCREL% - x86_64 - Updates - Debug
 #baseurl=http://download.fedoraproject.org/pub/fedora/linux/updates/%FCREL%/x86_64/debug/
 metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f%FCREL%&arch=x86_64
+skip_if_unavailable=False
 enabled=0
 enablegroups=0
 gpgcheck=1
@@ -20,6 +22,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-%FCREL%-primary
 name=Fedora %FCREL% - Updates Source
 #baseurl=http://download.fedoraproject.org/pub/fedora/linux/updates/%FCREL%/SRPMS/
 metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f%FCREL%&arch=x86_64
+skip_if_unavailable=False
 enabled=0
 enablegroups=0
 gpgcheck=1
