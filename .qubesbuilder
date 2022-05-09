@@ -1,4 +1,4 @@
 host:
   rpm:
-    spec:
+    build:
     - qubes-release.spec
