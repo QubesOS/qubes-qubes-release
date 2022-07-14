@@ -1,4 +1,5 @@
 %define dist_version @VERSION@
+%define full_version @VERSION@.1
 %define release_name R%{dist_version}
 %define fedora_base_version 32
 
@@ -42,7 +43,7 @@ Qubes release notes package.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/etc
-echo "Qubes release %{version} (%{release_name})" > $RPM_BUILD_ROOT/etc/qubes-release
+echo "Qubes release %{full_version} (%{release_name})" > $RPM_BUILD_ROOT/etc/qubes-release
 echo "cpe:/o:ITL:qubes:%{version}" > $RPM_BUILD_ROOT/etc/system-release-cpe
 cp -p $RPM_BUILD_ROOT/etc/qubes-release $RPM_BUILD_ROOT/etc/issue
 echo "Kernel \r on an \m (\l)" >> $RPM_BUILD_ROOT/etc/issue
@@ -57,7 +58,7 @@ NAME=Qubes
 VERSION="%{version} (%{release_name})"
 ID=qubes
 VERSION_ID=%{version}
-PRETTY_NAME="Qubes %{version} (%{release_name})"
+PRETTY_NAME="Qubes %{full_version} (%{release_name})"
 ANSI_COLOR="0;31"
 CPE_NAME="cpe:/o:ITL:qubes:%{version}"
 EOF
