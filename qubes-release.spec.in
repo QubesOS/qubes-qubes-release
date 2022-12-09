@@ -11,8 +11,12 @@ License:	GPLv2
 Group:		System Environment/Base
 Source0:	%{name}-%{version}.tar.bz2
 Obsoletes:	fedora-release
+Obsoletes:	fedora-release-variant <= %{fedora_base_version}
+Obsoletes:	fedora-release-common <= %{fedora_base_version}
+Obsoletes:  fedora-repos <= %{fedora_base_version}
 Obsoletes:	redhat-release
 Provides:	fedora-release = %{fedora_base_version}-%{release}
+Provides:	fedora-release-variant = %{fedora_base_version}-%{release}
 Provides:	redhat-release = %{fedora_base_version}-%{release}
 Provides:	system-release = %{fedora_base_version}-%{release}
 Provides:	system-release(releasever) = %{version}
