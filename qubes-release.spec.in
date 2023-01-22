@@ -1,7 +1,7 @@
 %define dist_version @VERSION@
 %define full_version @VERSION@.0-alpha
 %define release_name R%{dist_version}
-%define fedora_base_version 32
+%define fedora_base_version 37
 
 Summary:	Qubes release files
 Name:		qubes-release
@@ -99,7 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-%doc GPL 
+%doc GPL
 %config %attr(0644,root,root) /etc/os-release
 %config %attr(0644,root,root) /etc/qubes-release
 %config %attr(0644,root,root) /etc/fedora-release
