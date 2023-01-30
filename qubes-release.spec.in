@@ -58,11 +58,11 @@ ln -s qubes-release $RPM_BUILD_ROOT/etc/redhat-release
 ln -s qubes-release $RPM_BUILD_ROOT/etc/system-release
 
 cat << EOF >>$RPM_BUILD_ROOT/etc/os-release
-NAME=Qubes
+NAME=Qubes OS
 VERSION="%{version} (%{release_name})"
 ID=qubes
 VERSION_ID=%{version}
-PRETTY_NAME="Qubes %{full_version} (%{release_name})"
+PRETTY_NAME="Qubes OS %{full_version} (%{release_name})"
 ANSI_COLOR="0;31"
 CPE_NAME="cpe:/o:ITL:qubes:%{version}"
 EOF
@@ -72,7 +72,7 @@ install -d -m 755 $RPM_BUILD_ROOT/etc/pki/rpm-gpg
 install -m 644 RPM-GPG-KEY* $RPM_BUILD_ROOT/etc/pki/rpm-gpg/
 
 install -d -m 755 $RPM_BUILD_ROOT/etc/yum.repos.d
-sed -e "s/%%DIST%%/fc%{fedora_base_version}/" qubes-dom0.repo.in > $RPM_BUILD_ROOT/etc/yum.repos.d/qubes-dom0.repo
+sed -e "s/%%DIST%%/fc%{fedora_base_version}/" qubes-host.repo.in > $RPM_BUILD_ROOT/etc/yum.repos.d/qubes-host.repo
 sed -e "s/%%FCREL%%/%{fedora_base_version}/" fedora.repo.in > $RPM_BUILD_ROOT/etc/yum.repos.d/fedora.repo
 sed -e "s/%%FCREL%%/%{fedora_base_version}/" fedora-updates.repo.in > $RPM_BUILD_ROOT/etc/yum.repos.d/fedora-updates.repo
 install -m 644 qubes-templates.repo $RPM_BUILD_ROOT/etc/yum.repos.d
@@ -109,7 +109,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir /etc/yum.repos.d
 %config(noreplace) /etc/yum.repos.d/fedora.repo
 %config(noreplace) /etc/yum.repos.d/fedora-updates.repo
-%config(noreplace) /etc/yum.repos.d/qubes-dom0.repo
+%config(noreplace) /etc/yum.repos.d/qubes-host.repo
 %config /etc/yum.repos.d/qubes-templates.repo
 %config(noreplace) %attr(0644,root,root) /etc/issue
 %config(noreplace) %attr(0644,root,root) /etc/issue.net
@@ -122,5 +122,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.Qubes-Release-Notes
 
 %changelog
-* Wed Jan 13 2010 Tomasz Sterna <smoku@xiaoka.com> - 1
-- Initial Qubes 1 Release package
+@CHANGELOG@
