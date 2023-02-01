@@ -72,7 +72,7 @@ install -d -m 755 $RPM_BUILD_ROOT/etc/pki/rpm-gpg
 install -m 644 RPM-GPG-KEY* $RPM_BUILD_ROOT/etc/pki/rpm-gpg/
 
 install -d -m 755 $RPM_BUILD_ROOT/etc/yum.repos.d
-sed -e "s/%%DIST%%/fc%{fedora_base_version}/" qubes-host.repo.in > $RPM_BUILD_ROOT/etc/yum.repos.d/qubes-host.repo
+sed -e "s/%%DIST%%/fc%{fedora_base_version}/" qubes-dom0.repo.in > $RPM_BUILD_ROOT/etc/yum.repos.d/qubes-dom0.repo
 sed -e "s/%%FCREL%%/%{fedora_base_version}/" fedora.repo.in > $RPM_BUILD_ROOT/etc/yum.repos.d/fedora.repo
 sed -e "s/%%FCREL%%/%{fedora_base_version}/" fedora-updates.repo.in > $RPM_BUILD_ROOT/etc/yum.repos.d/fedora-updates.repo
 install -m 644 qubes-templates.repo $RPM_BUILD_ROOT/etc/yum.repos.d
@@ -109,7 +109,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir /etc/yum.repos.d
 %config(noreplace) /etc/yum.repos.d/fedora.repo
 %config(noreplace) /etc/yum.repos.d/fedora-updates.repo
-%config(noreplace) /etc/yum.repos.d/qubes-host.repo
+%config(noreplace) /etc/yum.repos.d/qubes-dom0.repo
 %config /etc/yum.repos.d/qubes-templates.repo
 %config(noreplace) %attr(0644,root,root) /etc/issue
 %config(noreplace) %attr(0644,root,root) /etc/issue.net
