@@ -102,7 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc GPL
 %config %attr(0644,root,root) /etc/os-release
 %config %attr(0644,root,root) /etc/qubes-release
-%config %attr(0644,root,root) /etc/fedora-release
+/etc/fedora-release
 /etc/redhat-release
 /etc/system-release
 %config %attr(0644,root,root) /etc/system-release-cpe
