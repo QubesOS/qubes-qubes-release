@@ -25,6 +25,7 @@ Conflicts:	qubes-core-dom0-linux < 4.0.23
 Obsoletes:	qubes-dom0-dist-upgrade <= 3.2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:	noarch
+BuildRequires: systemd-rpm-macros
 
 %description
 Qubes release files such as yum configs and various /etc/ files that
