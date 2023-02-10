@@ -59,7 +59,7 @@ ln -s qubes-release $RPM_BUILD_ROOT/etc/redhat-release
 ln -s qubes-release $RPM_BUILD_ROOT/etc/system-release
 
 cat << EOF >>$RPM_BUILD_ROOT/etc/os-release
-NAME=Qubes OS
+NAME="Qubes OS"
 VERSION="%{version} (%{release_name})"
 ID=qubes
 VERSION_ID=%{version}
