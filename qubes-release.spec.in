@@ -94,8 +94,19 @@ install -d $RPM_BUILD_ROOT%{_sysusersdir}
 install -m0644 sysusers-qubes.conf $RPM_BUILD_ROOT%{_sysusersdir}/qubes.conf
 
 %posttrans
+# Remove old keys
+remove_keys="gpg-pubkey-fdb19c98-56fd6333 \
+             gpg-pubkey-12c944d0-5d5156ab \
+             gpg-pubkey-03fa5082-546c9ad2 \
+             gpg-pubkey-0c8231bf-546e0afc \
+             gpg-pubkey-a3c773ad-546e036b \
+             gpg-pubkey-9e2795e9-58bd5efe \
+             gpg-pubkey-4022e393-59ba4d79 \
+             gpg-pubkey-7bb6de87-593f289b"
 # Import all keys b/c rpm won't do it automatically (as opposite to yum)
-systemd-run --on-active=5min rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-*
+import_keys="/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-37-primary \
+             /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.2-primary"
+systemd-run --on-active=5min sh -c "rpm -e $remove_keys; rpm --import $import_keys"
 
 
 %clean
