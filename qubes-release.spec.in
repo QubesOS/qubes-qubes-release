@@ -105,7 +105,8 @@ remove_keys="gpg-pubkey-fdb19c98-56fd6333 \
              gpg-pubkey-7bb6de87-593f289b"
 # Import all keys b/c rpm won't do it automatically (as opposite to yum)
 import_keys="/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-37-primary \
-             /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.2-primary"
+             /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.2-primary \
+             /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.2-unstable"
 systemd-run --on-active=5min sh -c "rpm -e $remove_keys; rpm --import $import_keys"
 
 
