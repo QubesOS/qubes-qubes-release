@@ -47,6 +47,11 @@ Qubes release notes package.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
+# comps file
+install -d -m 755 $RPM_BUILD_ROOT/usr/share/qubes
+install -m 644 comps/comps-dom0.xml $RPM_BUILD_ROOT/usr/share/qubes/qubes-comps.xml
+
 install -d $RPM_BUILD_ROOT/etc
 echo "Qubes release %{full_version} (%{release_name})" > $RPM_BUILD_ROOT/etc/qubes-release
 echo "cpe:/o:ITL:qubes:%{version}" > $RPM_BUILD_ROOT/etc/system-release-cpe
@@ -85,7 +90,7 @@ cat >> $RPM_BUILD_ROOT/etc/rpm/macros.dist << EOF
 
 %%qubes		%{dist_version}
 %%dist		.qbs%{dist_version}
-%%fedora		%{fedora_base_version}
+%%fedora	%{fedora_base_version}
 %%qbs3		1
 %%fc%{fedora_base_version}		1
 EOF
@@ -133,6 +138,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir /etc/pki/rpm-gpg
 /etc/pki/rpm-gpg/*
 %{_sysusersdir}/qubes.conf
+/usr/share/qubes/qubes-comps.xml
 
 %files notes
 %defattr(-,root,root,-)
