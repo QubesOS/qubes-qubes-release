@@ -1720,7 +1720,7 @@
     <default>false</default>
     <uservisible>false</uservisible>
     <packagelist>
-      <packagereq>qubes-template-fedora-39-xfce</packagereq>
+      <packagereq>qubes-template-fedora-40-xfce</packagereq>
     </packagelist>
   </group>
   <group>
