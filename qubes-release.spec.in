@@ -23,6 +23,7 @@ Provides:	system-release(releasever) = %{version}
 Conflicts:	rpm < 4.14
 Conflicts:	qubes-core-dom0-linux < 4.0.23
 Obsoletes:	qubes-dom0-dist-upgrade <= 3.2
+Conflicts:	qubes-dom0-meta-packages < 4.2.13
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:	noarch
 BuildRequires: systemd-rpm-macros
