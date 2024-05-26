@@ -1715,8 +1715,8 @@
   </group>
   <group>
     <id>fedora</id>
-    <name>Fedora 38 template</name>
-    <description>Fedora 38 template</description>
+    <name>Fedora 40 template</name>
+    <description>Fedora 40 template</description>
     <default>false</default>
     <uservisible>false</uservisible>
     <packagelist>
