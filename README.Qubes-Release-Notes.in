@@ -1,0 +1,34 @@
+Qubes R%VERSION% release notes
+==============================
+
+New features since previous version
+-----------------------------------
+
+TODO
+
+You can get detailed description in [completed github issues][github-release-notes]
+
+Known issues
+------------
+
+* For other known issues take a look at [our tickets](https://github.com/QubesOS/qubes-issues/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Release+%VERSION%%22+label%3Aaffects-%VERSION%)
+
+It is advised to install updates just after system installation to apply bug fixes for (some of) the above problems.
+
+Downloads
+---------
+
+See [Qubes Downloads](https://www.qubes-os.org/downloads/).
+
+Installation instructions
+-------------------------
+
+See [Installation Guide](https://www.qubes-os.org/doc/installation-guide/).
+
+Upgrading
+---------
+
+TODO
+
+[github-release-notes]: https://github.com/QubesOS/qubes-issues/issues?q=release+notes+is%3Aclosed+label%3A%22release+notes%22+milestone%3A%22Release+%VERSION%%22
+
