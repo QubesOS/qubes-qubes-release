@@ -1,7 +1,7 @@
 %define dist_version @VERSION@
 %define full_version @VERSION@-alpha
 %define release_name R%{dist_version}
-%define fedora_base_version 37
+%define fedora_base_version 41
 
 Summary:	Qubes release files
 Name:		qubes-release
@@ -110,9 +110,10 @@ remove_keys="gpg-pubkey-fdb19c98-56fd6333 \
              gpg-pubkey-4022e393-59ba4d79 \
              gpg-pubkey-7bb6de87-593f289b \
              gpg-pubkey-8e34d89f-633c3eb9 \
+             gpg-pubkey-5323552a-6112bcdc \
              gpg-pubkey-beb24936-659c9647"
 # Import all keys b/c rpm won't do it automatically (as opposite to yum)
-import_keys="/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-37-primary \
+import_keys="/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-41-primary \
              /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.3-primary"
 
 # not available yet
