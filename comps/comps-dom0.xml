@@ -217,6 +217,8 @@
       <packagereq>xorg-x11-server-Xorg</packagereq>
       <packagereq>xorg-x11-xauth</packagereq>
       <packagereq>xorg-x11-xinit</packagereq>
+      <!-- Added in Qubes -->
+      <packagereq>xterm</packagereq>
     </packagelist>
   </group>
   <group>
