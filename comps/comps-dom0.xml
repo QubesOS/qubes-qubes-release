@@ -1715,12 +1715,12 @@
   </group>
   <group>
     <id>fedora</id>
-    <name>Fedora 40 template</name>
-    <description>Fedora 40 template</description>
+    <name>Fedora 41 template</name>
+    <description>Fedora 41 template</description>
     <default>false</default>
     <uservisible>false</uservisible>
     <packagelist>
-      <packagereq>qubes-template-fedora-40-xfce</packagereq>
+      <packagereq>qubes-template-fedora-41-xfce</packagereq>
     </packagelist>
   </group>
   <group>
