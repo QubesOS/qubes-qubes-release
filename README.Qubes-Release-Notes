@@ -1,17 +1,16 @@
-Qubes R4.1 release notes
-========================
+Qubes release notes
+===================
 
-New features since 4.0
-----------------------
+The latest Qubes OS release notes are available at:
 
-TODO
-
-You can get detailed description in [completed github issues][github-release-notes]
+[On-line release notes](https://www.qubes-os.org/doc/releases/notes/)
 
 Known issues
 ------------
 
-* For other known issues take a look at [our tickets](https://github.com/QubesOS/qubes-issues/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Release+4.0%22+label%3Abug)
+* For known issues take a look at our tickets:
+
+[Known issues](https://github.com/QubesOS/qubes-issues/issues)
 
 It is advised to install updates just after system installation to apply bug fixes for (some of) the above problems.
 
@@ -28,7 +27,9 @@ See [Installation Guide](https://www.qubes-os.org/doc/installation-guide/).
 Upgrading
 ---------
 
-TODO
+See [Upgrading Guide](https://www.qubes-os.org/doc/upgrade/)
 
-[github-release-notes]: https://github.com/QubesOS/qubes-issues/issues?q=is%3Aissue+sort%3Aupdated-desc+milestone%3A%22Release+4.0%22+label%3Arelease-notes+is%3Aclosed
+Support
+-------
 
+Visit [Support Channels](https://www.qubes-os.org/support/)
