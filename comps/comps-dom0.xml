@@ -2718,7 +2718,7 @@
     <default>false</default>
     <uservisible>false</uservisible>
     <packagelist>
-      <packagereq>qubes-template-fedora-41-xfce</packagereq>
+      <packagereq>qubes-template-fedora-42-xfce</packagereq>
     </packagelist>
   </group>
   <group>
