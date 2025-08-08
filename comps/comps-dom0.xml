@@ -2723,12 +2723,12 @@
   </group>
   <group>
     <id>debian</id>
-    <name>Debian 12 (bookworm) template</name>
-    <description>Debian 12 (bookworm) template</description>
+    <name>Debian 13 (trixie) template</name>
+    <description>Debian 13 (trixie) template</description>
     <default>false</default>
     <uservisible>false</uservisible>
     <packagelist>
-      <packagereq>qubes-template-debian-12-xfce</packagereq>
+      <packagereq>qubes-template-debian-13-xfce</packagereq>
     </packagelist>
   </group>
   <group>
