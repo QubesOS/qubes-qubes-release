@@ -2738,8 +2738,8 @@
     <description>Whonix templates (gateway and workstation)</description>
     <uservisible>false</uservisible>
     <packagelist>
-      <packagereq>qubes-template-whonix-gateway-17</packagereq>
-      <packagereq>qubes-template-whonix-workstation-17</packagereq>
+      <packagereq>qubes-template-whonix-gateway-18</packagereq>
+      <packagereq>qubes-template-whonix-workstation-18</packagereq>
     </packagelist>
   </group>
   <environment>
