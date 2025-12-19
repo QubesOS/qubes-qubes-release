@@ -42,6 +42,13 @@ Conflicts:	fedora-release-notes
 %description notes
 Qubes release notes package.
 
+%package devel
+Summary:    Qubes devel packages repository
+
+%description devel
+Qubes devel packages repository. Packages built from the main branch directly,
+not official releases, no any guarantee, no security support. Use at your
+own risk.
 
 %prep
 %setup -q
@@ -80,6 +87,7 @@ install -m 644 RPM-GPG-KEY* $RPM_BUILD_ROOT/etc/pki/rpm-gpg/
 
 install -d -m 755 $RPM_BUILD_ROOT/etc/yum.repos.d
 sed -e "s/%%DIST%%/fc%{fedora_base_version}/" qubes-dom0.repo.in > $RPM_BUILD_ROOT/etc/yum.repos.d/qubes-dom0.repo
+sed -e "s/%%DIST%%/fc%{fedora_base_version}/" qubes-devel.repo.in > $RPM_BUILD_ROOT/etc/yum.repos.d/qubes-devel.repo
 sed -e "s/%%FCREL%%/%{fedora_base_version}/" fedora.repo.in > $RPM_BUILD_ROOT/etc/yum.repos.d/fedora.repo
 sed -e "s/%%FCREL%%/%{fedora_base_version}/" fedora-updates.repo.in > $RPM_BUILD_ROOT/etc/yum.repos.d/fedora-updates.repo
 install -m 644 qubes-templates.repo $RPM_BUILD_ROOT/etc/yum.repos.d
@@ -122,6 +130,13 @@ import_keys="/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-41-primary \
 
 systemd-run --on-active=5min sh -c "rpm -e $remove_keys; rpm --import $import_keys"
 
+%posttrans devel
+# Import all keys b/c rpm won't do it automatically (as opposite to yum)
+import_keys="/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-devel-primary"
+
+#systemd-run --on-active=5min sh -c "rpm -e $remove_keys; rpm --import $import_keys"
+systemd-run --on-active=5min sh -c "rpm --import $import_keys"
+
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -145,13 +160,18 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %attr(0644,root,root) /etc/issue.net
 %config %attr(0644,root,root) /etc/rpm/macros.dist
 %dir /etc/pki/rpm-gpg
-/etc/pki/rpm-gpg/*
+/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-%{fedora_base_version}-primary
+/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-%{version}-*
 %{_sysusersdir}/qubes.conf
 /usr/share/qubes/qubes-comps.xml
 
 %files notes
 %defattr(-,root,root,-)
 %doc README.Qubes-Release-Notes
+
+%files devel
+/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-devel-primary
+%config /etc/yum.repos.d/qubes-devel.repo
 
 %changelog
 @CHANGELOG@
