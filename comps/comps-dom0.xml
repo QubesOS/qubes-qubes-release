@@ -598,8 +598,8 @@
       <packagereq type="mandatory">vim-minimal</packagereq>
       <packagereq type="mandatory">yum</packagereq>
       <packagereq type="default">dnf5-plugins</packagereq>
-      <packagereq type="default">dracut-config-rescue</packagereq>
       <!--
+      <packagereq type="default">dracut-config-rescue</packagereq>
       <packagereq type="default">firewalld</packagereq>
       -->
       <packagereq type="default">fwupd</packagereq>
