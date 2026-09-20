@@ -1,4 +1,4 @@
-%define dist_version @VERSION@
+%define dist_version devel
 %define full_version @VERSION@.1
 %define release_name R%{dist_version}
 %define fedora_base_version 41
