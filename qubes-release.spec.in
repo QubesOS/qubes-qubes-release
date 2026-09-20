@@ -5,7 +5,7 @@
 
 Summary:	Qubes release files
 Name:		qubes-release
-Version:	%{dist_version}
+Version:	@VERSION@
 Release:	@REL@%{?dist}
 License:	GPLv2
 Group:		System Environment/Base
@@ -19,7 +19,7 @@ Provides:	fedora-release = %{fedora_base_version}-%{release}
 Provides:	fedora-release-variant = %{fedora_base_version}-%{release}
 Provides:	redhat-release = %{fedora_base_version}-%{release}
 Provides:	system-release = %{fedora_base_version}-%{release}
-Provides:	system-release(releasever) = %{version}
+Provides:	system-release(releasever) = %{dist_version}
 Conflicts:	rpm < 4.14
 Conflicts:	qubes-core-dom0-linux < 4.0.23
 Obsoletes:	qubes-dom0-dist-upgrade <= 3.2
@@ -66,12 +66,12 @@ ln -s qubes-release $RPM_BUILD_ROOT/etc/system-release
 
 cat << EOF >>$RPM_BUILD_ROOT/etc/os-release
 NAME="Qubes OS"
-VERSION="%{version} (%{release_name})"
+VERSION="%{dist_version} (%{release_name})"
 ID=qubes
-VERSION_ID=%{version}
+VERSION_ID=%{dist_version}
 PRETTY_NAME="Qubes OS %{full_version} (%{release_name})"
 ANSI_COLOR="0;31"
-CPE_NAME="cpe:/o:ITL:qubes:%{version}"
+CPE_NAME="cpe:/o:ITL:qubes:%{dist_version}"
 EOF
 
 install -d -m 755 $RPM_BUILD_ROOT/etc/pki/rpm-gpg
