@@ -2335,7 +2335,7 @@
     <name>Sway Window Manager (supplemental packages)</name>
     <description>Sway is a tiling window manager supporting Wayland compositor protocol and i3-compatible configuration. This group includes additional set of packages for Fedora Sway spin.</description>
     <default>false</default>
-    <uservisible>true</uservisible>
+    <uservisible>false</uservisible>
     <packagelist>
       <packagereq type="mandatory">sway-config-fedora</packagereq>
       <packagereq type="default">blueman</packagereq>
